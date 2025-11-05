@@ -1,0 +1,25 @@
+/* Este archivo contiene los estilos personalizados que no están 
+  cubiertos por las clases de utilidad de Tailwind.
+*/
+
+/* Estilo para la barra de navegación activa */
+.nav-link-active {
+    color: #818cf8; /* color indigo-400 */
+    font-weight: 700; /* Hacemos que sea negrita */
+}
+
+/* Animación de aparición (fade-in) para JS */
+.fade-in {
+    opacity: 0;
+    /* Comienza 20px más abajo */
+    transform: translateY(20px); 
+    /* Define la transición para opacidad y transformación */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Clase que se añade con JS cuando el elemento es visible */
+.fade-in-visible {
+    opacity: 1;
+    /* Vuelve a su posición original */
+    transform: translateY(0);
+}
