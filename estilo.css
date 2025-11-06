@@ -4,7 +4,7 @@
 
 /* Estilo para la barra de navegación activa */
 .nav-link-active {
-    color: oklch(78.9% 0.154 211.53); /* color indigo-400 */
+    color: oklch(78.9% 0.154 211.53); /* color sky-600 */
     font-weight: 700; /* Hacemos que sea negrita */
 }
 
