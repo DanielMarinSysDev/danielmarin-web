@@ -254,10 +254,15 @@
     <!-- ENLACE A TU ARCHIVO JAVASCRIPT -->
     <script src="script.js" defer></script>
 
-    <!-- Vercel Analytics -->
+    <!-- Vercel Analytics & Speed Insights -->
     <script type="module">
+      // Importamos ambas herramientas desde el CDN
       import { inject } from 'https://esm.sh/@vercel/analytics';
+      import { injectSpeedInsights } from 'https://esm.sh/@vercel/speed-insights';
+
+      // Iniciamos los servicios
       inject();
+      injectSpeedInsights();
     </script>
 
 </body>
