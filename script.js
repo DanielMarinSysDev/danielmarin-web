@@ -113,4 +113,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         });
     }
+
+    // --- 7. Enlaces Seguros (Anti-Scraping) ---
+    const secureLinks = document.querySelectorAll('.secure-link');
+    
+    secureLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const type = link.getAttribute('data-type');
+            const part1 = link.getAttribute('data-part1');
+            const part2 = link.getAttribute('data-part2');
+            
+            let url = '';
+            
+            switch (type) {
+                case 'email':
+                    url = `mailto:${part1}@${part2}`;
+                    window.location.href = url;
+                    break;
+                case 'whatsapp':
+                    const msg = link.getAttribute('data-msg');
+                    url = `https://wa.me/${part1}?text=${encodeURIComponent(msg)}`;
+                    window.open(url, '_blank');
+                    break;
+            }
+        });
+    });
 });

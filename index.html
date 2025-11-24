@@ -226,9 +226,22 @@
                     Actualmente estoy buscando nuevas oportunidades. Si tienes alguna pregunta o simplemente quieres saludar, ¡contáctame!
                 </p>
                 
-                <a href="mailto:contacto@danielmarinsysdev.me" class="inline-block bg-Sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-Sky-700 transition duration-300 shadow-lg mb-12 fade-in">
-                    Enviar un mensaje
-                </a>
+                <!-- Botones de Contacto Seguros -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12 fade-in">
+                    <button class="secure-link bg-Sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-Sky-700 transition duration-300 shadow-lg"
+                            data-type="email" 
+                            data-part1="contacto" 
+                            data-part2="danielmarinsysdev.me">
+                        Enviar Correo
+                    </button>
+                    
+                    <button class="secure-link bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-700 transition duration-300 shadow-lg"
+                            data-type="whatsapp" 
+                            data-part1="584248454940" 
+                            data-msg="Hola Daniel, vi tu portafolio">
+                        WhatsApp
+                    </button>
+                </div>
                 
                 <!-- Redes Sociales -->
                 <div class="flex justify-center space-x-8 fade-in">
