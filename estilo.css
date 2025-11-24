@@ -23,3 +23,16 @@
     /* Vuelve a su posición original */
     transform: translateY(0);
 }
+
+/* Easter Egg: Modo SysDev */
+.sysdev-mode {
+    filter: hue-rotate(90deg) contrast(1.2);
+    font-family: 'Courier New', Courier, monospace;
+}
+.sysdev-mode body {
+    background: #000 !important;
+}
+.sysdev-mode * {
+    color: #0f0 !important;
+    border-color: #0f0 !important;
+}

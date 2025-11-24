@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans leading-relaxed relative" style="background: radial-gradient(circle, rgb(59, 95, 146) 0%, rgb(0, 10, 41) 100%);">
+
+    <!-- Contenedor de Partículas -->
+    <div id="tsparticles" class="absolute inset-0 -z-10"></div>
+
+    <!-- ==== 1. ENCABEZADO Y NAVEGACIÓN ==== -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,12 +90,12 @@
     <main>
 
         <!-- ==== 2. SECCIÓN DE INICIO (HERO) ==== -->
-        <section id="inicio" class="min-h-screen flex items-center justify-center text-center px-6" style="background: radial-gradient(circle, rgb(59, 95, 146) 0%, rgb(0, 10, 41) 100%);">
+        <section id="inicio" class="min-h-screen flex items-center justify-center text-center px-6">
             <div class="max-w-4xl mx-auto">
                 <!-- Imagen de Perfil (Placeholder) -->
-                <img src="Favicon.png" 
+                <img id="profile-img" src="Favicon.png" 
                      alt="Foto de perfil" 
-                     class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-gray-700 shadow-xl">
+                     class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-gray-700 shadow-xl cursor-pointer transition-transform active:scale-95">
                      
                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
                     Hola, soy <span class="text-Sky-400">Daniel Marin</span>
@@ -150,70 +159,11 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-16 text-center">Proyectos Destacados</h2>
                 
                 <!-- Cuadrícula de Proyectos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
-                    <!-- Proyecto 1 -->
-                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-[1.03] hover:shadow-2xl fade-in">
-                        <img src="https://placehold.co/600x400/1F2937/0284c7?text=Proyecto+1" 
-                             alt="Imagen del Proyecto 1" 
-                             class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-Sky-600 mb-3">Nombre del Proyecto 1</h3>
-                            <p class="text-gray-300 mb-4">
-                                Una breve descripción de lo que hace el proyecto.
-                            </p>
-                            <div class="mb-5">
-                                <span class="inline-block bg-gray-700 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">JavaScript</span>
-                                <span class="inline-block bg-gray-700 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">HTML5</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-Sky-400 font-medium hover:text-Sky-300 transition duration-300">Ver Demo</a>
-                                <a href="#" class="text-Sky-400 font-medium hover:text-Sky-300 transition duration-300">Código (GitHub)</a>
-                            </div>
-                        </div>
+                <div id="proyectos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Los proyectos se cargarán dinámicamente con JS -->
+                    <div class="col-span-full text-center text-gray-400 animate-pulse">
+                        Cargando proyectos desde GitHub...
                     </div>
-
-                    <!-- Proyecto 2 -->
-                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-[1.03] hover:shadow-2xl fade-in">
-                        <img src="https://placehold.co/600x400/1F2937/0284c7?text=Proyecto+2" 
-                             alt="Imagen del Proyecto 2" 
-                             class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-Sky-600 mb-3">Nombre del Proyecto 2</h3>
-                            <p class="text-gray-300 mb-4">
-                                Una breve descripción de lo que hace el proyecto.
-                            </p>
-                            <div class="mb-5">
-                                <span class="inline-block bg-gray-700 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">React</span>
-                                <span class="inline-block bg-gray-700 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Node.js</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-Sky-400 font-medium hover:text-Sky-300 transition duration-300">Ver Demo</a>
-                                <a href="#" class="text-Sky-400 font-medium hover:text-Sky-300 transition duration-300">Código (GitHub)</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Proyecto 3 -->
-                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-[1.03] hover:shadow-2xl fade-in">
-                        <img src="https://placehold.co/600x400/1F2937/0284c7?text=Proyecto+3" 
-                             alt="Imagen del Proyecto 3" 
-                             class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-Sky-600 mb-3">Nombre del Proyecto 3</h3>
-                            <p class="text-gray-300 mb-4">
-                                Una breve descripción de lo que hace el proyecto.
-                            </p>
-                            <div class="mb-5">
-                                <span class="inline-block bg-gray-700 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Figma</span>
-                                <span class="inline-block bg-gray-700 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">Diseño UX</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-Sky-400 font-medium hover:text-Sky-300 transition duration-300">Ver Caso de Estudio</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div> <!-- fin de la cuadrícula -->
             </div>
         </section>
@@ -271,11 +221,13 @@
         </p>
     </footer>
 
-    <!-- ==== 7. BOTÓN DE SUBIR (SCROLL TO TOP) ==== -->
+    <!-- BOTÓN DE SUBIR (SCROLL TO TOP) -->
     <button id="scrollTopBtn" class="hidden fixed bottom-6 right-6 bg-Sky-600 text-white p-3 rounded-full shadow-lg hover:bg-Sky-700 transition duration-300 z-50">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
     </button>
 
+    <!-- tsParticles CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
 
     <!-- ENLACE A TU ARCHIVO JAVASCRIPT -->
     <script src="script.js" defer></script>
