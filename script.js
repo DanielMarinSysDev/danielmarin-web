@@ -1,8 +1,3 @@
-/*
-  Este archivo contiene toda la lógica de JavaScript 
-  para la interactividad del portafolio.
-*/
-
 // Esperamos a que todo el contenido del DOM esté cargado
 document.addEventListener('DOMContentLoaded', (event) => {
     
@@ -100,5 +95,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const currentYearEl = document.getElementById('current-year');
     if (currentYearEl) {
         currentYearEl.textContent = new Date().getFullYear();
+    }
+
+    // --- 6. Menú Móvil ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn') || document.querySelector('.md\\:hidden button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     }
 });

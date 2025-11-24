@@ -6,11 +6,9 @@
     
     <!-- Título del Portafolio -->
     <title>Daniel Marin - Portafolio Digital</title>
+    <meta name="description" content="Portafolio de Daniel Marin, estudiante de Ingeniería de Sistemas y Desarrollador Full Stack. Proyectos en Python, Web y Diseño.">
 
-    <!-- 
-      AQUÍ COLOCAS TU FAVICON:
-      Reemplaza 'favicon.ico' y 'favicon-180.png' con las rutas a tus imágenes.
-    -->
+    <!--FAVICON-->
     <link rel="icon" type="image/svg+xml" href="/Favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -38,8 +36,8 @@
         }
     </script>
     
-    <!-- ENLACE A TU HOJA DE ESTILOS PERSONALIZADA -->
-    <link rel="stylesheet" href="estilos.css">
+    <!-- ENLACE LA HOJA DE ESTILOS PERSONALIZADA -->
+    <link rel="stylesheet" href="estilo.css">
 
 </head>
 <body class="bg-gray-900 text-gray-200 font-sans leading-relaxed">
@@ -61,12 +59,22 @@
 
                 <!-- Botón de Menú Móvil -->
                 <div class="md:hidden">
-                    <button class="text-white focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
             </div>
         </nav>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800 absolute w-full left-0 top-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="#inicio" class="nav-link text-gray-300 hover:text-Sky-400 block" data-section="inicio">Inicio</a>
+                <a href="#sobre-mi" class="nav-link text-gray-300 hover:text-Sky-400 block" data-section="sobre-mi">Sobre mí</a>
+                <a href="#proyectos" class="nav-link text-gray-300 hover:text-Sky-400 block" data-section="proyectos">Proyectos</a>
+                <a href="#contacto" class="nav-link text-gray-300 hover:text-Sky-400 block" data-section="contacto">Contacto</a>
+            </div>
+        </div>
     </header>
 
     <!-- ==== CONTENIDO PRINCIPAL ==== -->
@@ -114,7 +122,7 @@
                         Soy un estudiante de Ingeniería de Sistemas con experiencia en desarrollo web. He trabajado en varios proyectos que me han permitido aplicar mis conocimientos en programación y diseño.
                     </p>
                     <p class="text-lg text-gray-300 mb-4">
-                        Me especializo en tecnologías como y tengo un fuerte interés en el diseño UX/UI. Mi objetivo es crear soluciones digitales que sean tanto funcionales como atractivas.
+                        Me especializo en tecnologías como Python, JavaScript y SQL, y tengo un fuerte interés en el diseño UX/UI. Mi objetivo es crear soluciones digitales que sean tanto funcionales como atractivas.
                     </p>
                     <p class="text-lg text-gray-300">
                         En mi tiempo libre, disfruto aprender sobre nuevas tecnologías, contribuir a proyectos de código abierto y explorar el mundo del diseño gráfico.
@@ -124,8 +132,12 @@
                     <div class="mt-8">
                         <h3 class="text-2xl font-semibold text-white mb-4">Habilidades Clave</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-Sky-500/20 text-Sky-300 rounded-full px-4 py-1 font-medium">Diseño</span>
                             <span class="bg-Sky-500/20 text-Sky-300 rounded-full px-4 py-1 font-medium">Python</span>
+                            <span class="bg-Sky-500/20 text-Sky-300 rounded-full px-4 py-1 font-medium">JavaScript</span>
+                            <span class="bg-Sky-500/20 text-Sky-300 rounded-full px-4 py-1 font-medium">HTML/CSS</span>
+                            <span class="bg-Sky-500/20 text-Sky-300 rounded-full px-4 py-1 font-medium">Git/GitHub</span>
+                            <span class="bg-Sky-500/20 text-Sky-300 rounded-full px-4 py-1 font-medium">SQL</span>
+                            <span class="bg-Sky-500/20 text-Sky-300 rounded-full px-4 py-1 font-medium">Diseño UI</span>
                         </div>
                     </div>
                 </div>
